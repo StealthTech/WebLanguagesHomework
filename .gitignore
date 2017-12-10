@@ -104,3 +104,6 @@ env/
 # PyCharm Meta Files
 .idea/
 
+# SQLite 3 Databases 
+*.sqlite3
+
