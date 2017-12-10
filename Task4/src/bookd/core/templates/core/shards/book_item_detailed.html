@@ -1,0 +1,12 @@
+{% load static %}
+<h1 class="paragraph-header">{{ book.title }}</h1>
+<div class="book-item">
+    <div class="book-item__image"><img src="{% static 'core/images/bookmark.png' %}"></div>
+    <div class="book-item__description">
+        <div class="book-item__header">{{ book.title }}</div>
+        <div class="book-item__author">{{ book.author }}</div>
+    </div>
+</div>
+<div class="bumper">
+    <a href="{% url 'core:index' %}">Вернуться на главную</a>
+</div>

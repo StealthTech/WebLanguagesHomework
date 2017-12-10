@@ -1,0 +1,14 @@
+{% extends 'core/shards/base.html' %}
+{% block title %}Главная страница{% endblock %}
+{% block content %}
+    <div class="book-list">
+        <h1 class="paragraph-header">Список книг</h1>
+        {% if book_list %}
+            {% for book in book_list %}
+                {% include 'core/shards/book_item.html' with book=book %}
+            {% endfor %}
+        {% else %}
+            <div class="book-list__help">К сожалению, пока нет ни одной книги.</div>
+        {% endif %}
+    </div>
+{% endblock %}

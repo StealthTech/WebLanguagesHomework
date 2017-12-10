@@ -1,0 +1,5 @@
+{% extends 'core/shards/base.html' %}
+{% block title %}{{ book.title }}{% endblock %}
+{% block content %}
+    {% include 'core/shards/book_item_detailed.html' with book=book %}
+{% endblock %}

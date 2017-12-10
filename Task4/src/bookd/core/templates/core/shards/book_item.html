@@ -1,0 +1,9 @@
+{% load static %}
+<div class="book-item">
+    <div class="book-item__image"><img src="{% static 'core/images/bookmark.png' %}"></div>
+    <div class="book-item__description">
+        <div class="book-item__header">{{ book.title }}</div>
+        <div class="book-item__author">{{ book.author }}</div>
+        <div><a href="{% url 'core:book_details' book.pk %}">Перейти</a></div>
+    </div>
+</div>
