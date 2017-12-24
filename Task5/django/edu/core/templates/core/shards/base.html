@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}edu{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'core/css/base.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif">
+    <link rel="stylesheet" href="{% static 'core/ext/bootstrap-4.0.0-beta.2-dist/css/bootstrap.min.css' %}">
+    {% block style %}{% endblock %}
+
+    <script src="{% static 'core/ext/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'core/ext/popper.min.js' %}"></script>
+    <script src="{% static 'core/ext/bootstrap-4.0.0-beta.2-dist/js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        {% include 'core/shards/page_header.html' %}
+        <div class="row content-pad">
+            <div class="col-md-3 content-pad__left"></div>
+            <div class="col-md-6 content-pad__middle">
+                {% block content %}{% endblock %}
+            </div>
+            <div class="col-md-3 content-pad__right"></div>
+        </div>
+    </div>
+</body>
+</html>

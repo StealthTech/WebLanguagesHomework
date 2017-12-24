@@ -1,0 +1,12 @@
+<div class="department-item">
+    <div class="department-item__title">{{ department.combined_title }}</div>
+    {% if department.group_set.exists %}
+        {% for group in department.group_set.all %}
+            <a href="{% url 'core:group_details' group.pk %}" class="generic-item-inline">
+                {{ group.title }}
+            </a>
+        {% endfor %}
+    {% else %}
+        <div class="department-item__help">На данном факультете не зарегистрировано ни одной группы.</div>
+    {% endif %}
+</div>
